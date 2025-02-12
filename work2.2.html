@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function calculator(operator, num1, num2) {
+            let result;
+
+            // 使用 switch 语句根据操作符执行相应的运算
+            switch (operator) {
+                case '+':
+                    result = num1 + num2;
+                    break;
+                case '-':
+                    result = num1 - num2;
+                    break;
+                case '*':
+                    result = num1 * num2;
+                    break;
+                case '/':
+                    if (num2 === 0) {
+                        return "错误：除数不能为 0";
+                    }
+                    result = num1 / num2;
+                    break;
+                default:
+                    return "错误：无效的操作符";
+            }
+
+            return result;
+        }
+
+        console.log(calculator('+', 5, 3));
+        console.log(calculator('-', 9, 4));
+        console.log(calculator('*', 8, 2));
+        console.log(calculator('/', 20, 5));
+        console.log(calculator('/', 9, 0));
+        console.log(calculator('%', 2, 3)); 
+    </script>
+</body>
+
+</html>

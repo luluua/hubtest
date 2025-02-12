@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 学生信息存储为数组
+        const students = [
+            { name: "Aa", age: 20, score: 85 },
+            { name: "Bb", age: 21, score: 90 },
+            { name: "Cc", age: 19, score: 78 },
+            { name: "Dd", age: 22, score: 95 },
+            { name: "Ee", age: 20, score: 88 }
+        ];
+
+        // 1. 计算所有学生的平均成绩
+        function calculateAverageScore(students) {
+            let i = 0;
+            let totalScore = 0;
+            for (i; i < students.length; i++) {
+
+                totalScore += students[i].score;
+            }
+            return totalScore / students.length;
+        }
+
+        // 2. 找出成绩最高的学生信息
+        function findHighestScoringStudent(students) {
+            let highestScore = 0;
+            for (let i = 0; i < students.length; i++) {
+                if (students[i].score > highestScore) {
+                    highestScore = students[i].score;
+                }
+            }
+            return highestScore;
+
+        }
+
+        // 3. 根据学生成绩进行排序（从高到低）
+        function sortStudentsByScore(students) {
+            return students.sort((a, b) => b.score - a.score);
+        }
+
+        // 测试功能
+        console.log("所有学生的平均成绩:", calculateAverageScore(students));
+
+        const highestScoringStudent = findHighestScoringStudent(students);
+        console.log("成绩最高的学生信息:", highestScoringStudent);
+
+        const sortedStudents = sortStudentsByScore(students);
+        console.log("按成绩从高到低排序的学生信息:", sortedStudents);
+    </script>
+</body>
+
+</html>

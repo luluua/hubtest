@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a = 3;
+        let b = 5;
+        let temp;
+
+        temp = a;
+        a = b;
+        b = temp;
+        /*方案二：代数运算
+        //加减
+        a = a + b;
+        b = a - b;
+        a = a - b; 
+        //乘除
+        a = a * b; 
+        b = a / b; 
+        a = a / b; 
+        */
+
+        /*方案三：使用数组
+        a = [b, b = a][0]; */
+
+        /*方案四：使用函数
+        function swap(x, y) {
+            return [y, x];
+        }
+
+        [a, b] = swap(a, b);*/
+
+        /*方案五：异或位运算
+        a = a ^ b;
+        b = a ^ b;
+        a = a ^ b;
+        */
+
+        console.log(a, b); 
+    </script>
+
+</body>
+
+</html>

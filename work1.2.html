@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录界面</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #352a55;
+            /* font-family: Arial, sans-serif; */
+        }
+
+        .container {
+            width: 300px;
+            background-color: hwb(261 20% 58%);
+            border-radius: 15px;
+            overflow: hidden;
+            /* 隐藏超出圆角的部分 */
+
+        }
+
+        .top {
+            margin: 50px auto 30px;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .bottom {
+            background-color: rgb(240, 240, 240);
+            padding: 10px;
+            position: relative;
+            text-align: center;
+            padding-top: 60px;
+            padding-bottom: 80px;
+        }
+
+        .bottom::before {
+            content: '登录';
+            font-weight: 700;
+            font-size: 35px;
+            color: #352a55;
+            position: absolute;
+            top: -20px;
+            left: 0;
+            right: 0;
+            height: 40px;
+            background-color: rgb(240, 240, 240);
+            border-radius: 50%;
+            margin-bottom: 20px;
+
+        }
+
+        input[type="email"],
+        input[type="password"] {
+            width: 80%;
+            padding: 10px;
+            background-color: hwb(0 92% 8%);
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 90%;
+            padding: 10px;
+            background-color: #352a55;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin-top: 30px;
+            cursor: pointer;
+            font-weight: 700;
+        }
+
+        button:hover {
+            background-color: hsl(255, 56%, 74%);
+        }
+
+        button:active {
+            background-color: #352a55;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="top">
+            <h2>注册</h2>
+        </div>
+        <div class="bottom">
+            <input type="email" placeholder="输入邮箱">
+            <input type="password" placeholder="输入密码">
+            <button>登录</button>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -5,14 +5,116 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .box1 {
+            display: flex;
+            background-color: pink;
+            width: 100px;
+            height: 100px;
+            /* margin: 0px; */
+        }
+
+        .box1 p {
+            margin: 0 auto;
+        }
+
+        p {
+            display: flex;
+            margin: 0px;
+        }
+
+        .box3 {
+            margin: 0 0 0 40px;
+        }
+
+        .box3 .box31 th {
+            font-weight: 400;
+        }
+
+
+
+        .box3 .box32 th {
+            font-weight: 400;
+        }
+    </style>
 </head>
 
 <body>
     <h1>一级标题</h1>
-    <p>p标签</p>
+    <p>这是一个P标签</p>
     <h2>二级标题</h2>
-    <p>下面有一张图片</p>
-    <img src="../../未命名文件.png" alt="picture">
+    <p>下面有张图片哦</p>
+    <img src="../work1.1.png" alt="picture" width="200px">
+    <div class="box1">
+        <p>这是一个盒子</p>
+    </div>
+    <p><a href="http://baidu.com/?tn=98010089_dg&ch=2">跳转到百度</a></p>
+    <div class="box2">
+        <ul>
+            <li>列表1</li>
+            <li>列表2</li>
+            <li>列表3</li>
+            <li>列表4</li>
+            <li>列表5</li>
+        </ul>
+    </div>
+    <div class="box3">
+        <button type="submit">点我</button>
+        <table border="1" class="box31">
+            <thead>
+                <tr>
+                    <th>知识点</th>
+                    <th>重要程度</th>
+                    <th>难度</th>
+                    <th>学习周期</th>
+                </tr>
+                <tr>
+                    <td>html</td>
+                    <td>5</td>
+                    <td>3</td>
+                    <td>7days</td>
+                </tr>
+                <tr>
+                    <td>html</td>
+                    <td>5</td>
+                    <td>3</td>
+                    <td>7days</td>
+                </tr>
+                <tr>
+                    <td>html</td>
+                    <td>5</td>
+                    <td>3</td>
+                    <td>7days</td>
+                </tr>
+            </thead>
+        </table>
+        <table border="1" class="box32">
+            <tr>
+                <th>科目</th>
+                <th>分数</th>
+            </tr>
+            <tr>
+                <td>语文</td>
+                <td>99</td>
+
+            </tr>
+            <tr>
+                <td>数学</td>
+                <td>45</td>
+            </tr>
+            <tr>
+                <td>总分</td>
+                <td>144</td>
+            </tr>
+        </table>
+        <ol>
+            <li>fighting!</li>
+            <li>fighting!</li>
+            <li>fighting!</li>
+            <li>fighting!</li>
+            <li>fighting!</li>
+        </ol>
+    </div>
 
 </body>
 

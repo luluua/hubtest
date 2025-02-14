@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const original = { a: 1, b: { c: 2 } };
+
+        // 1.浅拷贝：Object.assign({},original)
+        // const copy = Object.assign({}, original);
+        //浅拷贝：展开运算符
+        const copy = { ...original };
+
+        // 修改 copy.b.c 的值
+        copy.b.c = 3;
+
+        console.log("original.b.c:", original.b.c); // 输出: 3
+        console.log("copy.b.c:", copy.b.c); // 输出: 3
+        /*解释：浅拷贝只复制了对象的第一层属性。对于嵌套对象（b），浅拷贝只会复制其引用，而不是创建一个新的嵌套对象。
+        因此，copy.b 和 original.b “指向“同一个对象
+        此时修改 copy.b.c 的值会同时影响 original.b.c，因为它们共享同一个嵌套对象。
+        */
+
+
+        // 2.深拷贝（递归方式）
+        function deepCopy(obj) {
+            if (typeof obj !== 'object' || obj === null) {
+                return obj; // 如果是基本类型或 null，直接返回
+            }
+            const newObj = Array.isArray(obj) ? [] : {}; // 处理数组和对象
+            for (let key in obj) {
+                if (obj.hasOwnProperty(key)) {
+                    newObj[key] = deepCopy(obj[key]); // 递归拷贝
+                }
+            }
+            return newObj;
+        }
+
+        const deepCopyObj = deepCopy(original);
+
+        // 修改 deepCopyObj.b.c 的值
+        deepCopyObj.b.c = 4;
+
+        console.log("original.b.c:", original.b.c); // 输出: 2
+        console.log("deepCopyObj.b.c:", deepCopyObj.b.c); // 输出: 4
+        /*解释：深拷贝会递归复制对象的所有层级属性，包括嵌套对象；
+        deepCopyObj 是一个全新的对象，与 original 完全独立；
+        修改 deepCopyObj.b.c 的值不会影响 original.b.c，因为它们是完全独立的嵌套对象。*/
+    </script>
+</body>
+
+</html>

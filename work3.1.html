@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function chengji() {
+            let sum = 1;
+            for (let i = 0; i < arguments.length; i++) {
+                if (typeof arguments[i] === 'number') {
+                    sum *= arguments[i];
+                }
+            }
+            console.log(sum);
+        }
+        function repeatstr(a, ...arr) {
+            let sum = 0;
+            for (let i = 0; i < arr.length; i++) {
+                sum += arr[i];
+            }
+            str = a;
+            for (let i = 1; i < sum; i++) {
+                str = str + a;
+            }
+
+            console.log(str);
+        }
+
+        //举例
+        chengji(9, 8, '$');
+        repeatstr('abcf', 1, 3);
+    </script>
+</body>
+
+</html>

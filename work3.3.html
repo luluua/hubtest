@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //1. 定义 Car 构造函数
+        function Car(brand, year) {
+            this.brand = brand;
+            this.year = year;
+        }
+        const myCar = new Car('luluua', 2005);
+
+        console.log('Car Brand:', myCar.brand);
+        console.log('Car Year:', myCar.year);
+
+        // 2.为 Car 构造函数的原型添加 displayInfo 方法
+        Car.prototype.displayInfo = function () {
+            console.log(`brand is ${this.brand},year is ${this.year}`);
+        }
+
+        const Car1 = new Car('yoyo', 2025);
+
+        Car1.displayInfo();
+    </script>
+</body>
+
+</html>

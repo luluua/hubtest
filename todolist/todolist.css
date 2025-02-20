@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+body {
+    color: #444;
+    display: flex;
+    /* 父元素添加flex属性，子元素变为弹性盒子 */
+    justify-content: center;
+    margin: 100px auto;
+    background-color: lightblue;
+    font-family: Arial, sans-serif;
+}
+
+.todo-plus-icon,
+.todo-icon,
+.star-icon {
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+    /* 填充容器 */
+}
+
+.container {
+    width: 350px;
+    /* 没有写高度，高度由内容填充--因为是弹性盒子 */
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 20px 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.left-header h1 {
+    font-size: 35px;
+    margin-bottom: 7px;
+}
+
+.left-header p {
+    margin-left: 8px;
+    color: lightblue;
+}
+
+.right-header {
+    font-size: small;
+    color: #666;
+}
+
+.new-task {
+    display: flex;
+    align-items: center;
+    border-radius: 10%;
+    border-bottom: 8px solid lightblue;
+    margin-bottom: 5px;
+}
+
+.new-task input {
+    border: none;
+    outline: none;
+    width: 300px;
+    font-size: large;
+    padding: 5px;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgb(193, 190, 190);
+    padding: 5px;
+}
+
+.todo-content {
+    flex: 1;
+    padding-left: 10px;
+}
+
+.todo-text {
+    font-size: 16px;
+}
+
+.todo-time {
+    font-size: 13px;
+    color: #888;
+}
+
+.delete-button {
+    background-color: hsl(206, 48%, 78%);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.delete-button:hover {
+    background-color: rgb(124, 187, 246);
+}

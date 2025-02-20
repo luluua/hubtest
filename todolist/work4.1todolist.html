@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoList</title>
+    <link rel="stylesheet" href="../todolist/todolist.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- header -->
+        <div class="header">
+            <div class="left-header">
+                <h1>ToDoList</h1>
+                <p>by luluua</p>
+            </div>
+            <div class="right-header">
+                <span>今天</span>
+            </div>
+        </div>
+        <!-- new-task -->
+        <div class="new-task">
+            <img class="todo-plus-icon" src="../todolist/plus_icon.png" alt="">
+            <input type="text" placeholder="添加任务">
+        </div>
+        <!-- todo-list -->
+        <div class="todo-list">
+            <!-- 任务会动态添加到这里 -->
+        </div>
+        <!-- done-list -->
+        <div class="done-list">
+            <!-- 已完成的任务会动态添加到这里 -->
+        </div>
+    </div>
+    <!-- 任务模板 -->
+    <div class="todo-template" style="display: none;">
+        <div class="todo-item">
+            <img class="todo-icon" src="../todolist/未完成.png" alt="">
+            <div class="todo-content">
+                <div class="todo-text">任务内容</div>
+                <div class="todo-time">创建时间</div>
+                <!-- <div class="todo-type">任务</div> -->
+            </div>
+            <img class="star-icon" src="../todolist/未收藏.png" alt="">
+            <button class="delete-button">删除</button>
+        </div>
+    </div>
+    <script src="../todolist/todo.js"></script>
+</body>
+
+</html>

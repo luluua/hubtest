@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.slider {
+    width: 560px;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 15px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.slider-wrapper {
+    width: 100%;
+    height: 320px;
+    position: relative;
+}
+
+.slider-wrapper img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    /* display: block; */
+    top: 0;
+    left: 0;
+    opacity: 0;
+    /* transition: opacity 0.5s ease-in-out; */
+    /* 添加过渡效果 */
+    transition: opacity 0.5s ease-in-out;
+    /* 添加 transform 过渡 */
+}
+
+.slider-wrapper img.appear {
+    /* ！！！注意：img,appear中间没有空格 */
+    opacity: 1;
+    z-index: 1;
+    /* 确保当前显示的图片在最上层 */
+}
+
+.slider-footer {
+    height: 80px;
+    background-color: hsla(161, 89%, 85%, 0.812);
+    padding: 12px 12px 0 12px;
+    position: relative;
+}
+
+.slider-footer .toggle {
+    /* 将内容直接定位在右上角 */
+    position: absolute;
+    right: 0;
+    top: 12px;
+    display: flex;
+}
+
+.slider-footer .toggle button {
+    margin-right: 12px;
+    width: 28px;
+    height: 28px;
+    appearance: none;
+    /* 用于移除button的默认样式 */
+    border: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    /* 移动到图案时显示鼠标图像 */
+}
+
+.slider-footer .toggle button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    /* 设置鼠标经过时效果 */
+}
+
+.slider-footer p {
+    margin: 0;
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.slider-indicator {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    /* 设置垂直居中 */
+}
+
+.slider-indicator li {
+    width: 8px;
+    height: 8px;
+    margin: 4px;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 0.4;
+    cursor: pointer;
+}
+
+.slider-indicator li.active {
+    width: 12px;
+    height: 12px;
+    opacity: 1;
+}

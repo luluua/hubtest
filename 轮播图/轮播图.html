@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../轮播图/轮播图.css">
+</head>
+
+<body>
+
+    <!-- html部分 -->
+    <div class="slider">
+        <div class="slider-wrapper">
+            <!-- 使用图片重叠的方式，方便使用opacity实现淡入淡出的效果 -->
+            <img src="../轮播图/img/1.jpg" alt="" class="appear" />
+            <!-- 必须先给第一个标签添加'appear'类名
+             反之，js中首先移除所有带有appear类的逻辑会报错，因为没有任何img带appear类
+             同时，也是为了静止效果，封面展示 -->
+            <img src="../轮播图/img/2.jpg" alt="" />
+            <img src="../轮播图/img/3.jpg" alt="" />
+            <img src="../轮播图/img/4.jpg" alt="" />
+            <img src="../轮播图/img/5.jpg" alt="" />
+            <img src="../轮播图/img/6.jpg" alt="" />
+        </div>
+        <div class="slider-footer">
+            <p>阳光倾洒的午后与喷泉邂逅</p>
+            <ul class="slider-indicator">
+                <li class="active" data-id="1"></li>
+                <li data-id="2"></li>
+                <li data-id="3"></li>
+                <li data-id="4"></li>
+                <li data-id="5"></li>
+                <li data-id="6"></li>
+            </ul>
+            <div class="toggle">
+                <button class="prev">&lt;</button>
+                <button class="next">&gt;</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../轮播图/轮播图.js"></script>
+</body>
+
+</html>

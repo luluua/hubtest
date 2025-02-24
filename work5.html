@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        console.log("1");
+        //延时函数
+        setTimeout(() => {
+            console.log("2");
+            Promise.resolve().then(() => {
+                console.log("3");
+            }).then(() => {
+                console.log("4");
+            });
+        }, 0);
+        async function test() {
+            console.log("5");
+            await Promise.resolve().then(() => {
+                console.log("6");
+            });
+            console.log("7");
+        }
+        test();//函数调用
+        //延时函数
+        setTimeout(() => {
+            console.log("8");
+        }, 0);
+
+        console.log("9");
+    </script>
+    <!-- 1.先执行同步任务
+    1，test（）：5，9
+    其中test中Promise.resolve().then(()将任务放到微队列，在微队列执行前，后面语句不执行
+    2.执行微队列 6，7
+    3.宏任务队列：2，3（微队列），4，8-->
+</body>
+
+</html>
